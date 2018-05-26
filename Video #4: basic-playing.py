@@ -91,8 +91,8 @@ while 1:
                 bestCenter = (int(x),int(y))
 
         # compute puck x,y from 0,0 to 1,1 where 0,0 is top left of table 1,1 is bottom right
-        puck_x = (float(bestCenter[0]) - float(fieldx)) / float(fieldw)
-        puck_y = (float(bestCenter[1]) - float(fieldy)) / float(fieldh)
+        puck_x = (float(bestCenter[0]) - float(fieldx)) / float(fieldw) * 100.0
+        puck_y = (float(bestCenter[1]) - float(fieldy)) / float(fieldh) * 100.0
 
         # draw puck location and table location to frame
         cv2.circle(frame,bestCenter,bestRadius,(0,255,0),2)
